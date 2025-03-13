@@ -16,14 +16,13 @@ public class RequestBuilder {
         this.modifiers = modifiers;
     }
     public RequestBuilder(){
-
     }
 
     public HttpRequest buildGET() throws URISyntaxException {
 
         return HttpRequest.newBuilder()
                 .uri(new URI("https://api.spotify.com/v1/playlists/" + playlistID + "/tracks" + modifiers))
-                .header("Authorization", "Bearer" + token)
+                .header("Authorization", "Bearer " + token)
                 .GET()
                 .build();
     }
