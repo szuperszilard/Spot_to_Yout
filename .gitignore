@@ -5,6 +5,7 @@ target/
 
 
 .env
+client_secret_1022806737832-3q64d5rg5is6d3lkbnes83vst1l59te7.apps.googleusercontent.com.json
 ### IntelliJ IDEA ###
 .idea/modules.xml
 .idea/jarRepositories.xml
