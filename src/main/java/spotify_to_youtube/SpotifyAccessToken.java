@@ -1,10 +1,10 @@
-package spotify;
+package spotify_to_youtube;
 
-public class AccessToken {
+public class SpotifyAccessToken {
 
     private String access_token;
 
-    public AccessToken() {
+    public SpotifyAccessToken() {
     }
 
     @Override

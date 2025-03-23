@@ -1,27 +1,27 @@
-package spotify;
+package spotify_to_youtube;
 
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.net.http.HttpRequest;
 
-public class RequestBuilder {
+public class SpotifyRequestBuilder {
 
     private String playlistID;
     private String token;
     private String modifiers;
 
-    public RequestBuilder(String playlistID, String modifiers, String token) {
+    public SpotifyRequestBuilder(String playlistID, String modifiers, String token) {
         this.playlistID = playlistID;
         this.token = token;
         this.modifiers = modifiers;
     }
-    public RequestBuilder(){
+    public SpotifyRequestBuilder(){
     }
 
     public HttpRequest buildGET() throws URISyntaxException {
 
         return HttpRequest.newBuilder()
-                .uri(new URI("https://api.spotify.com/v1/playlists/" + playlistID + "/tracks" + modifiers))
+                .uri(new URI("https://api.spotify.com/v1/playlists/" + playlistID  + modifiers))
                 .header("Authorization", "Bearer " + token)
                 .GET()
                 .build();
